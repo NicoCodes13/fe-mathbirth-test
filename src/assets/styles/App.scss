@@ -1,0 +1,35 @@
+@import './Vars.scss';
+@import './Media.scss';
+
+body {
+  margin:0;
+  font-family: $theme-font;
+  background: $backgound;
+}
+*{
+  box-sizing: border-box;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  max-width: 80%;
+  margin: 15vh auto;
+  border-radius: 5px;
+  opacity: 0.9;
+}
+.title{
+  margin-top: 3rem;
+}
+.datePicker{
+  display: flex;
+  align-items: center;
+  margin-top: 3.4rem;
+}
+.info{
+  text-align: center;
+  margin-top: 3.4rem;
+  margin-bottom: 3rem;
+}

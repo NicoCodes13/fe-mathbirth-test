@@ -1,0 +1,27 @@
+@media only screen and (max-width: 425px){
+  html{
+     font-size: 12px;
+  }
+  .container{
+    width: 90%;
+    margin: 10vh auto;
+  }
+}
+@media only screen and (max-width: 321px){
+  html{
+     font-size: 12px;
+  }
+  .container{
+    min-width: 95%;
+  }
+}
+@media only screen and (min-width: 1439px){
+  html{
+     font-size: 18px;
+  }
+}
+@media only screen and (min-width: 2559px){
+  html{
+     font-size: 20px;
+  }
+}
