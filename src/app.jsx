@@ -8,22 +8,26 @@ import dayjs, { Dayjs } from 'dayjs';
 import Birth from './birth';
 
 function App() {
-  const [value, setValue] = React.useState(dayjs('2022-04-07'));
+  const [value, setValue] = React.useState(dayjs());
   return (
     <React.Fragment>
-      <h1>Know your Math birthday</h1>
-      <div>
-        <LocalizationProvider dateAdapter={AdapterDayjs}>
-          <DatePicker
-            value={value}
-            onChange={(newValue) => {
-              setValue(newValue);
-            }}
-            renderInput={(params) => <TextField {...params} />}
-          />
-        </LocalizationProvider>
-      </div>
-      <Birth value={value.toString()}></Birth>
+      <main className='container'>
+        <h1>Know your Math birthday</h1>
+        <div>
+          <LocalizationProvider dateAdapter={AdapterDayjs}>
+            <DatePicker
+              openTo='year'
+              views={['year', 'month', 'day']}
+              value={value}
+              onChange={(newValue) => {
+                setValue(newValue);
+              }}
+              renderInput={(params) => <TextField {...params} />}
+            />
+          </LocalizationProvider>
+        </div>
+        <Birth value={value}></Birth>
+      </main>
     </React.Fragment>
   );
 }
